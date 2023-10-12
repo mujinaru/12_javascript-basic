@@ -7,6 +7,9 @@
  ## 10月12日
 
  - リテラルと演算子
+ - 文字列の連結
+ - 変数と定数
+ - 複合演算子
 
  ### 文字列の計算
 
@@ -60,6 +63,27 @@ console.log("2" / 4);//文字列 - 数値
   let n3 = 5;
    n3++; //インクリメント　１たす
     console.log(n3); //6
+ ```
+
+ ### リストを操作するDOM操作のスクリプト
+
+ ```js
+ //ulタグのリスト要素を取得
+        const element = document.querySelector("ul");
+        console.log(element);
+
+        //selectorってCSSのセレクターなので
+        const element2 = document.querySelector("#fruitslist");
+        console.log(element2);
+
+        //classも行ける？
+        const element3 = document.createElement(".listbox__list");
+        console.log(element3);
+
+        //新しい要素を作る
+        const lilast = document.createElement("li");
+        console.log(lilast);
+
  ```
 
  ## 10 月 5 日
