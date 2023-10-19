@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sample7-7</title>
+</head>
+
+<body>
+    <h1>果物の種類</h1>
+    <ul id="fruitslist" class="listbox__list">
+        <li>りんご</li>
+        <li>みかん</li>
+        <li>バナナ</li>
+        <!--メロン-->
+    </ul>
+    <!--リストを操作するDOM操作のスクリプト-->
+    <script>
+
+        //ulタグのリスト要素を取得
+        const element = document.querySelector("ul");
+        console.log(element);
+
+        //selectorってCSSのセレクターなので
+        const element2 = document.querySelector("#fruitslist");
+        console.log(element2);
+
+        //classも行ける？
+        const element3 = document.createElement(".listbox__list");
+        console.log(element3);
+
+        //新しい要素を作る
+        const lilast = document.createElement("li");
+        console.log(lilast);
+        lilast.textContent = "メロン";
+        console.dir(lilast);
+
+        //リストの最後に追加する。↑変数lilastの<li>メロン</li>を変数element内の<ul></ul>二追加する
+
+        element.appendChild(lilast);
+
+        const lilast = document.createElement;
+        lilast.textContent = "いちご";
+        element.appendChild(lilast);
+
+
+    </script>
+</body>
+
+</html>

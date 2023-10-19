@@ -3,6 +3,70 @@
 ## 授業内コード
  1. 10月５日（木）はじめの一歩
  2. 10月5日（木）GitHubレポジトリ作成
+ 3. 10月12日（木）文字列の連結、変数、定数、複合演算子
+ 4. 10月19日（木）documentオブジェクトとDOM
+
+ ## 10月19日
+ - コレクション
+ - 繰り返し配列
+
+ ## 配列の宣言と長さ
+
+ ```js
+ //fruitsの配列
+const fruits = ["りんご", "もも", "バナナ"];
+//配列要素の数
+console.log(fruits.length); //3
+console.log(fruits[2]); //バナナ
+for (let i = 0; i < 4; i++) {
+  console.log(`for文のサンプル：${i}`);
+}
+ ```
+ - 授業で書いたコード
+ ```js
+ <!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>複数要素の追加</title>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <h1>人気フルーツ一覧</h1>
+    <ul id="fruitslist" class="listbox__list"></ul>
+    <script>
+        //ulの中に果物一覧を一度にliで入れたい
+        //配列fruitsを宣言・値を代入
+        const fruits = ["りんご", "もも", "バナナ"];
+
+        //バナナがほしい
+        console.log(fruits[2]);
+
+        //ulをJavaScript空間に引きずり込む
+        const Element = document.querySelector("#fruitslist");
+        console.log(element);
+
+        //fruitsの要素数分だけfor分で回す
+        for (let i = 0; i < fruits.length; i++) {
+            //liを創出する
+            const lilast = document.createElement("li")
+
+            //liに値（果物→配列fruitsの中にある）を代入
+            console.log(fruits[i]);//りんご・もも・バナナが取れる
+            //創出したliの内容に果物を代入
+            lilast.textContent = fruits[i];
+            //element(※ul)の中の最後に追加
+            element.appendChild(lilast);
+
+        }
+    </script>
+</body>
+
+</html>
+ ```
+
 
  ## 10月12日
 
