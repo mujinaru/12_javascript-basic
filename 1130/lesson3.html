@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>演習３</title>
+</head>
+
+<body>
+    <ul>
+        <li>犬</li>
+        <li>猫</li>
+    </ul>
+    <p></p>
+    <p class="result"></p>
+    <button class="lesserafim">レセラフィム</button>
+    <button class="onepeace">ワンピース</button>
+    <div class="fnArea"></div>
+
+
+    <script>
+        const dogBtn = document.querySelector("li");
+        console.log(dogBtn);
+
+        const catBtn = document.querySelector("li:nth-child(2)");
+        console.log(catBtn);
+
+        const resurltArea = document.querySelector(".result");
+        console.log(resurltArea);
+
+        //関数式
+
+        console.log("あなたは、◯派です。");
+        const animalCheck = function (animal) {
+            resurltArea.textContent = "あなたは" + animal + "派です"
+        }
+
+        dogBtn.addEventListener("click", function () {
+            console.dir(this);
+            animalCheck("犬");
+        });
+
+        catBtn.addEventListener("click", function () {
+            console.dir(this);
+            animalCheck("猫");
+        });
+
+        //関数定義
+        const yoshinoya = function (don, amount, add, kane) {
+            console.log(don + "の" + amount + "," + add + "で" + kane + "円");
+            console.log(`${don}の${amount}、${add}で${kane}円`)
+        }
+
+
+        //関数の実行
+        //複数の引数を読み込む場合は、,で区切る
+        yoshinoya("牛丼", "並盛", "つゆだく", 388); //牛丼の並盛、つゆだくで 388 円
+        yoshinoya("豚丼", "大盛", "たまご", 592); //豚丼の大盛、たまごで 592 円
+
+
+        //引数が配列
+        const sumCard = function (card) {
+            let total = 0;
+            for (let i = 0; i < card.length; i++) {
+                total += card[i]; //toral = total + card[i]
+            }
+            console.log(total);
+        };
+
+        //配列
+        const card_list = [1, 2, 3, 4];
+
+        //関数の実行、引数には配列
+        sumCard(card_list); //10
+
+
+        const member_list = ["チェウォン", "サクラ", "ユンジン", "カズハ", "ウンチェ"];
+        const mugiwara_list = ["モンキー・D・ルフィ", "ナミ", "ロロノア・ゾロ", "ヴィンスモーク・サンジ", "ウソップ", "トニートニー・チョッパー", "ニコ・ロビン", "フランキー", "ブルック", "ジンベエ"];
+
+        //.fnAreaに上記の配列の要素を<li>要素で追加する要素
+        const memberArea = document.querySelector(".fnArea");
+
+
+        const memberPush = function (members) {
+            //memberAreaにul,liで各メンバーを入れる
+            console.log(members);
+            const ulElm = document.createElement("ul");
+            for (let i = 0; i < members.length; i++) {
+
+                const liElm = document.createElement("li");
+
+                liElm.textContent = members[i]
+
+                ulElm.appendChild(liElm);
+            }
+            memberArea.appendChild(ulElm);
+
+
+
+        }
+
+        //関数の実行
+        // memberPush(member_list);
+        // memberPush(mugiwara_list);
+
+        // ボタン鳥
+        const lesserafimBtn = document.querySelector(".lesserafim");
+        const onepeaceBtn = document.querySelector(".onepeace");
+
+        lesserafimBtn.addEventListener("click", function () {
+            console.log("ルセラフィム");
+            memberPush(member_list)
+
+        })
+
+        onepeaceBtn.addEventListener("click", function () {
+            console.log("ワンピース");
+            memberPush(mugiwara_list);
+        })
+
+
+    </script>
+</body>
+
+</html>
