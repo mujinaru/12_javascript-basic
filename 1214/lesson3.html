@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アロー関節</title>
+</head>
+
+<body>
+    <script>
+        //従来の関数式
+        const dog = function () {
+            return "わんわん";
+        };
+        //関数の定義
+        function dog2() {
+            return "BawBaw"
+        }
+        //関数ドッグを実行=()があるから
+        console.log(dog()); //わんわん
+        console.log(dog2());//BawBaw
+
+        //アロー関数の関数式　※アロー関数派関数式で使う
+        const cat = () => {
+            return "にゃーにゃーにゃー";
+        };
+        console.log(cat()); //にゃーにゃーにゃー
+
+        //鳴き方を決めたい アロー関数＋引数
+        const animals = (voice) => {
+            return voice;
+        }
+
+        //関数animalの実行
+        //ミャアミャア
+        console.log(animals("みゃあみゃあ"));
+
+        //thisは予約語なので変数名・関数名に使えない
+        const thisElm = document.querySelector("p");
+        console.log(thisElm);
+
+        thisElm.addEventListener("click", (e) => {
+            console.log("クリック");
+            console.log(e.target.innerText)
+        });
+
+    </script>
+</body>
+
+</html>
