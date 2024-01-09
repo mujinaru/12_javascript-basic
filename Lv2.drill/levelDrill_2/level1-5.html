@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>レベル1-HTMLの取得と連結</title>
+</head>
+
+<body>
+  <h1>坂道グループ</h1>
+  <ul>
+    <li class="baseball">野球</li>
+    <li class="soccer">サッカー</li>
+    <li class="rugby">ラグビー</li>
+    <li class="basketball">バスケットボール</li>
+    <li class="sample">バレーボール</li>
+  </ul>
+
+  <script>
+    const nine = 9;
+    const eleven = 11;
+    const fifteen = 15;
+    const five = 5;
+    const six = 6;
+
+    //例:htmlから要素を取得し、各スポーツの1チームの人数を文章にして表示させてください。
+    const volleyball = document.querySelector(".sample");
+    //抜き出したテキストと文字列、変数を組み合わせる
+    const volleyballText =
+      volleyball.textContent + "の1チームは" + six + "人です。";
+    //組み合わせたテキストをリストに戻して表示させる。
+    volleyball.innerText = volleyballText;
+
+    //野球の1チームは9人です。
+    const base = document.querySelector(".baseball");
+    const baseText =
+      base.textContent + "の1チームは" + nine + "人です。";
+    base.innerText = baseText;
+    //サッカーの1チームは11人です。
+    const so = document.querySelector(".soccer");
+    const soText =
+      so.textContent + "の1チームは" + eleven + "人です。";
+    so.innerText = soText;
+    //ラグビーの1チームは15人です。
+    const rug = document.querySelector(".rugby");
+    const rugText =
+      rug.textContent + "の1チームは" + fifteen + "人です。";
+    rug.innerText = rugText;
+    //バスケットボールの1チームは5人です。
+    const basuke = document.querySelector(".basketball");
+    const basukeText =
+      basuke.textContent + "の1チームは" + five + "人です。";
+    basuke.innerText = basukeText;
+  </script>
+</body>
+
+</html>
