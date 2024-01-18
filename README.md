@@ -11,7 +11,29 @@
  8. 12月7日
  9. 12月14日：コールバック関数とアロー関数
  10. 1月11日 : フォームとオブジェクト
+ 11. 1月18日 : フォームとオブジェクト
  0. 関数引数
+
+ ## 1月18日
+ - 配列
+ 例）
+ ```js
+ const animals = ["dog", "cat", "bird"];
+animals[2] = "lion";
+console.log(animals);
+```
+
+末尾に追加：push
+animals.push("tiger"); //"dog", "cat", "bird","tiger"
+
+先頭に追加：unshift
+animals.unshift("elephant");//"elephant","dog", "cat", "bird"
+
+末尾を削除：pop
+animals.pop();//"dog", "cat"
+
+先頭を削除：shift
+animals.shift();//"cat", "bird"
 
 ## 1月11日
 - フォーム
