@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .counter {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .count {
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="counter">
+        <button class="decrease" onclick="decreaseCount()">-</button>
+        <span class="count" id="countValue">0</span>
+        <button class="increase" onclick="increaseCount()">+</button>
+    </div>
+
+    <script>
+        // カウントの初期値
+        let count = 0;
+
+        // カウントを減らす関数
+        function decreaseCount() {
+            count = Math.max(0, count - 1); // マイナスにならないようにする
+            updateCount();
+        }
+
+        // カウントを増やす関数
+        function increaseCount() {
+            count++;
+            updateCount();
+        }
+
+        // カウントの表示を更新する関数
+        function updateCount() {
+            const countElement = document.getElementById('countValue');
+            countElement.textContent = count;
+        }
+    </script>
+
+</body>
+
+</html>

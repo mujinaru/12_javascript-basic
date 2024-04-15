@@ -88,7 +88,9 @@
       console.log(chiikawas[i]);
       const dlElm = document.createElement("dl");
       for (let key in chiikawas[i]) {
-        const dlElm = `<dt><span>第${chiikawas[i]["story"]}話</span>${chiikawas[i]["title"]}</dt>}`;
+        const dtElm = `<dt><span>第${chiikawas[i]["story"]}話</span>${chiikawas[i]["title"]}</dt>
+        <dd><a href="https://www.youtube.com/watch?v=${chiikawas[i]["id"]}"><img src="./images/${chiikawas[i]["image"]}"> </a></dd>`
+
         dlElm.innerHTML = dtElm;
         content.appendChild(dlElm);
 
